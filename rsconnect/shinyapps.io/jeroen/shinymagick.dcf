@@ -1,0 +1,10 @@
+name: shinymagick
+title:
+username:
+account: jeroen
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 231627
+bundleId: 1057516
+url: https://jeroen.shinyapps.io/shinymagick/
+when: 1509703736.69292
