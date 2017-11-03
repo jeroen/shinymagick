@@ -5,6 +5,9 @@ account: jeroen
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 231627
-bundleId: 1057516
+bundleId: 1057553
 url: https://jeroen.shinyapps.io/shinymagick/
-when: 1509703736.69292
+when: 1509705728.60876
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: readme.html

@@ -29,7 +29,7 @@ server <- function(input, output, session) {
   image <- image_read("https://images-na.ssl-images-amazon.com/images/I/81fXghaAb3L.jpg")
   observeEvent(input$upload, {
     if (length(input$upload$datapath))
-      image <<- image_read(input$upload$datapath)
+      image <<- image_convert(image_read(input$upload$datapath), "jpeg")
     info <- image_info(image)
     updateCheckboxGroupInput(session, "effects", selected = "")
     updateTextInput(session, "size", value = paste0(info$width, "x", info$height, "!"))
@@ -56,10 +56,10 @@ server <- function(input, output, session) {
     
     # Numeric operators
     tmpfile <- image %>%
-      image_rotate(input$rotation) %>%
+      image_resize(input$size) %>%
       image_implode(input$implode) %>%
       image_blur(input$blur, input$blur) %>%
-      image_resize(input$size) %>%
+      image_rotate(input$rotation) %>%
       image_write(tempfile(fileext='jpg'), format = 'jpg')
     
     # Return a list
