@@ -6,7 +6,8 @@ Minimal demo of how to use magick images in a shiny app.
 
 ```r
 library(shiny)
-runGitHub("shinymagick", "jeroen")
+library(magick)
+runGitHub("jeroen/shinymagick")
 ```
 
 ### Source Code
