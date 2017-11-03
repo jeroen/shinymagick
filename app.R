@@ -13,7 +13,7 @@ ui <- fluidPage(
       sliderInput("implode", "Implode", -1, 1, 0, step = 0.01),
       
       checkboxGroupInput("effects", "Effects",
-                         choices = list("negate", "charcoal", "edge", "flip", "flop"))
+                         choices = list("edge", "charcoal", "negate", "flip", "flop"))
     ),
     mainPanel(
       imageOutput("img")
@@ -39,14 +39,14 @@ server <- function(input, output, session) {
   output$img <- renderImage({
     
     # Boolean operators
-    if("negate" %in% input$effects)
-      image <- image_negate(image)
+    if("edge" %in% input$effects)
+      image <- image_edge(image)
     
     if("charcoal" %in% input$effects)
       image <- image_charcoal(image)
     
-    if("edge" %in% input$effects)
-      image <- image_edge(image)
+    if("negate" %in% input$effects)
+      image <- image_negate(image)    
     
     if("flip" %in% input$effects)
       image <- image_flip(image)
