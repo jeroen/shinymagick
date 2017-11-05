@@ -26,7 +26,9 @@ server <- function(input, output, session) {
   library(magick)
   
   # Start with placeholder img
-  image <- image_read("https://images-na.ssl-images-amazon.com/images/I/81fXghaAb3L.jpg")
+  image <- image_read("https://raw.githubusercontent.com/ThinkR-open/collage/master/inst/tigrou/tigrou.jpg")
+  
+  # When uploading new image
   observeEvent(input$upload, {
     if (length(input$upload$datapath))
       image <<- image_convert(image_read(input$upload$datapath), "jpeg")
