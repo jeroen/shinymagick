@@ -16,6 +16,4 @@ The source is entirly contained in [app.R](https://github.com/jeroen/shinymagick
 
 ### Try Online
 
-Free demo server: https://jeroen.shinyapps.io/shinymagick/. __NOTE__: The shinyapps.io server runs a very old version of ImageMagick. Most effects look much better when running locally on Windows / MacOS.
-
-
+Free demo server: https://jeroen.shinyapps.io/shinymagick/. ~The shinyapps.io server runs a very old version of ImageMagick. Most effects look much better when running locally on Windows / MacOS~. The shinyapps.io server [has been updated](https://github.com/rstudio/shinyapps-package-dependencies/pull/131) to use a recent ImageMagick PPA.
